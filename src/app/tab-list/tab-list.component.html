@@ -1,4 +1,16 @@
 <div class="container">
-Test
+    <table class="table table-dark table-striped table-borderless table-hover">
+        <thead>
+            <tr>
+              <th scope="col">Artist</th>
+              <th scope="col">Song</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let tab of tabs; let i = index">
+              <td>{{tab.artist}}</td>
+              <td>{{tab.song}}</td>
+            </tr>
+        </tbody>
+    </table>
 </div>
-<p>tab-list works!</p>
