@@ -8,7 +8,7 @@ import { Tab } from './models/Tab';
 })
 export class TabService {
 
-  tabsUrl = "http://magnias.be:3000/tabs"
+  tabsUrl = "https://tabbackend.magnias.be/tabs"
 
   constructor(
     private http: HttpClient) { }
