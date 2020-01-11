@@ -1,5 +1,5 @@
 export class Tab {
-    id: string;
+    _id: string;
     artist: string;
     song: string;
     tab?: string;

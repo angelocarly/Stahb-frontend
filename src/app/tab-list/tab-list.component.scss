@@ -12,12 +12,6 @@
     color: $base-text;
 }
 
-#icon-link {
-    float: left;
-    margin: 0.4em;
-}
-
-#icon {
-    max-height: 40px;
-    max-width: 40px;
+tbody > tr {
+    cursor: pointer;
 }

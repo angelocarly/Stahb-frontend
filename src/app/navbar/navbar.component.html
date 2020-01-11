@@ -21,15 +21,13 @@
   </div>
 </nav> -->
 <nav class="navbar navbar-expand-sm navbar-dark ">
-    <a class="navbar-brand" href="#">Magnias</a>
+    <a class="navbar-brand" href="https://www.magnias.be/">Magnias</a>
     <button class="navbar-toggler" type="button" (click)="isNavbarCollapsed = !isNavbarCollapsed" aria-controls="defaultnavbar" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div [ngbCollapse]="isNavbarCollapsed" class="collapse navbar-collapse" id="defaultnavbar">
       <div class="navbar-nav">
-        <a class="nav-item nav-link" routerLink="whois" routerLinkActive="active">Whois</a>
-        <a class="nav-item nav-link" routerLink="git" routerLinkActive="active">Git</a>
-        <a class="nav-item nav-link" href="https://tabs.magnias.be">Tabs</a>
+        <div class="nav-item nav-link active">Tabs</div> 
       </div>
     </div>
   </nav>

@@ -21,4 +21,8 @@ export class TabListComponent implements OnInit {
     this.tabService.getTabs()
       .subscribe(tabs => this.tabs = tabs);
   }
+
+  onclick(tab : Tab) {
+    console.log(tab._id);
+  }
 }
