@@ -7,7 +7,7 @@
             </tr>
           </thead>
           <tbody>
-            <tr *ngFor="let tab of tabs; let i = index">
+            <tr *ngFor="let tab of tabs; let i = index" class="clickable-row" (click)="onclick(tab)">
               <td>{{tab.artist}}</td>
               <td>{{tab.song}}</td>
             </tr>
