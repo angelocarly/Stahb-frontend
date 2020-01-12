@@ -10,7 +10,7 @@ import { Tab } from '../models/Tab';
 })
 export class TabComponent implements OnInit {
 
-  private tab: Tab;
+  tab: Tab;
 
   constructor(private route: ActivatedRoute, private tabService: TabService) { }
 
