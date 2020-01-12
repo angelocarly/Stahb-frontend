@@ -9,9 +9,10 @@ import { TabListComponent } from './tab-list/tab-list.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { TabDetailsComponent } from './tab-details/tab-details.component';
 import { RouterModule, Routes } from '@angular/router';
+import { TabComponent } from './tab/tab.component';
 
 const appRoutes: Routes = [
-  { path: 'tab', component: TabDetailsComponent },
+  { path: 'tab/:id', component: TabComponent },
   { path: 'tabs', component: TabListComponent },
   { path: '', redirectTo: 'tabs', pathMatch: 'full'}
 ];
@@ -21,7 +22,8 @@ const appRoutes: Routes = [
     AppComponent,
     TabListComponent,
     NavbarComponent,
-    TabDetailsComponent
+    TabDetailsComponent,
+    TabComponent
   ],
   imports: [
     RouterModule.forRoot(
