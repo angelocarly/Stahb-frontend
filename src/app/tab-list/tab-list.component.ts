@@ -23,6 +23,6 @@ export class TabListComponent implements OnInit {
   }
 
   onclick(tab : Tab) {
-    console.log(tab._id);
+    window.location.href = `tab/${tab._id}`
   }
 }

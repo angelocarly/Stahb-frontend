@@ -15,6 +15,9 @@ export class TabService {
 
   getTabs(): Observable<Tab[]> {
     return this.http.get<Tab[]>(this.tabsUrl)
+  }
 
+  getTab(id: string): Observable<Tab> {
+    return this.http.get<Tab>(this.tabsUrl+`/${id}`)
   }
 }
