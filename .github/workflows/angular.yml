@@ -21,6 +21,5 @@ jobs:
       run: |
         npm ci
         npm run build --prod --extract-css=false --if-present
-        npm test --no-sandbox --headless --prod
       env:
         CI: true
