@@ -23,3 +23,11 @@ jobs:
         npm run build --prod --extract-css=false --if-present
       env:
         CI: true
+    - name: SSH Commands
+      uses: appleboy/ssh-action@v0.0.2
+      with:
+        host: ${{ secrets.HOST }}
+        username: ${{ secrets.USERNAME }}
+        key: ${{ secrets.KEY }}
+        port: ${{ secrets.PORT }}
+        script: whoami
