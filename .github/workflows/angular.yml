@@ -21,6 +21,6 @@ jobs:
       run: |
         npm ci
         npm run build --prod --extract-css=false --if-present
-        npm test --browsers ChromeHeadless
+        npm test --prod
       env:
         CI: true
