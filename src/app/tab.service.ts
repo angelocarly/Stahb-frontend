@@ -10,14 +10,19 @@ export class TabService {
 
   tabsUrl = "https://tabbackend.magnias.be/tabs"
 
+  tabs: Observable<Tab[]>;
+
   constructor(
     private http: HttpClient) { }
 
   getTabs(): Observable<Tab[]> {
-    return this.http.get<Tab[]>(this.tabsUrl)
+    if (!this.tabs) {
+      this.tabs = this.http.get<Tab[]>(this.tabsUrl);
+    }
+    return this.tabs;
   }
 
   getTab(id: string): Observable<Tab> {
-    return this.http.get<Tab>(this.tabsUrl+`/${id}`)
+    return this.http.get<Tab>(this.tabsUrl + `/${id}`)
   }
 }
