@@ -8,11 +8,11 @@ const appRoutes: Routes = [
   {
     path: 'test',
     canActivate: [AuthGuardService],
-    loadChildren: 'app/weight-entry/weight-entry.module#WeightEntryModule',
+    // loadChildren: 'app/weight-entry/weight-entry.module#WeightEntryModule',
     //data: { preload: true }
   },
   {
-    path: '', redirectTo: '/weight-graph', pathMatch: 'full'
+    path: '', redirectTo: '/tabs', pathMatch: 'full'
   },
   { path: '**', component: PageNotFoundComponent }
 ];
