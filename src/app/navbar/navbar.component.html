@@ -21,14 +21,18 @@
   </div>
 </nav> -->
 <nav class="navbar navbar-expand-sm navbar-dark ">
-    <a class="navbar-brand" href="https://magnias.be/">Magnias</a>
-    <button class="navbar-toggler" type="button" (click)="isNavbarCollapsed = !isNavbarCollapsed" aria-controls="defaultnavbar" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div [ngbCollapse]="isNavbarCollapsed" class="collapse navbar-collapse" id="defaultnavbar">
-      <div class="navbar-nav">
-        <a class="nav-item nav-link" routerLink="tabs" routerLinkActive="active">Tabs</a>
-        <a class="nav-item nav-link" routerLink="login" routerLinkActive="active">Login</a>
-      </div>
+  <a class="navbar-brand" href="https://magnias.be/">Magnias</a>
+  <button class="navbar-toggler" type="button" (click)="isNavbarCollapsed = !isNavbarCollapsed"
+    aria-controls="defaultnavbar" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div [ngbCollapse]="isNavbarCollapsed" class="collapse navbar-collapse" id="defaultnavbar">
+    <div class="navbar-nav">
+      <a class="nav-item nav-link" routerLink="tabs" routerLinkActive="active">Tabs</a>
     </div>
-  </nav>
+    <div class="navbar-nav ml-auto">
+      <a *ngIf="!loggedIn" class="nav-item nav-link" routerLink="login" routerLinkActive="active">Login</a>
+      <a *ngIf="loggedIn" class="nav-item nav-link" routerLink="logout" routerLinkActive="active">Logout</a>
+    </div>
+  </div>
+</nav>

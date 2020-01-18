@@ -16,7 +16,7 @@ function parseJwt(token) {
 @Injectable()
 export class AuthenticationService {
   
-  private readonly _tokenKey = 'currentUser';
+  private readonly _tokenKey = 'access_token';
   private readonly _url = 'https://tabbackend.magnias.be/user';
   private _user$: BehaviorSubject<string>;
   public redirectUrl: string;
