@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { TabService } from '../tab.service';
-import { Tab } from '../models/Tab';
+import { Tab } from '../../models/Tab';
 
 @Component({
   selector: 'app-tab',
