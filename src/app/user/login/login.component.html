@@ -1,0 +1,17 @@
+<div class="container col-md-6">
+  <div *ngIf='errorMsg' class="ui error message">{{errorMsg}}</div>
+  <form [formGroup]='user' (ngSubmit)='onSubmit()'>
+    <h3 class="ui header">login</h3>
+    <div class="form-group">
+      <label for="username">username:</label>
+      <input type="text" class="form-control" id="username" formControlName='username'>
+    </div>
+    <div class="form-group">
+      <label for="password">password:</label>
+      <input type="password" class="form-control" id="password" formControlName='password'>
+    </div>
+    <button type='submit' [disabled]='!user.valid' class="btn btn-primary" id='loginbtn'>log
+      in</button>
+  </form>
+  <a class='item' routerLink="/register">register</a>
+</div>
