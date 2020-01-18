@@ -42,7 +42,7 @@ export class LoginComponent implements OnInit {
               this.router.navigateByUrl(this.authService.redirectUrl);
               this.authService.redirectUrl = undefined;
             } else {
-              this.router.navigate(['/weight-graph']);
+              this.router.navigate(['/tabs']);
             }
           } else {
             this.errorMsg = `Could not login`;

@@ -41,7 +41,7 @@ export class RegisterComponent implements OnInit {
         this.serverSideValidateUsername()
       ],
       passwordGroup: this.fb.group({
-        password: ['', [Validators.required, passwordValidator(12)]],
+        password: ['', [Validators.required, passwordValidator(8)]],
         confirmPassword: ['', Validators.required]
       }, { validator: comparePasswords })
     });
@@ -68,9 +68,10 @@ export class RegisterComponent implements OnInit {
       .register(this.user.value.username, this.passwordControl.value)
       .subscribe(
         val => {
-          this.router.navigate(['/add-weight-entry']);
+          this.router.navigate(['/tabs']);
         },
         (error: HttpErrorResponse) => {
+          console.log(error)
           this.errorMsg = `Error ${
             error.status
           } while trying to register user ${this.user.value.username}: ${
