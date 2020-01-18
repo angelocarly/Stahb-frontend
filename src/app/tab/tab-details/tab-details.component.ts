@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Tab } from '../models/Tab';
+import { Tab } from '../../models/Tab';
 
 @Component({
   selector: 'app-tab-details',

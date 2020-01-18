@@ -5,14 +5,20 @@ import { HttpClientModule }    from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { TabListComponent } from './tab-list/tab-list.component';
+import { TabListComponent } from './tab/tab-list/tab-list.component';
 import { NavbarComponent } from './navbar/navbar.component';
-import { TabDetailsComponent } from './tab-details/tab-details.component';
+import { TabDetailsComponent } from './tab/tab-details/tab-details.component';
 import { RouterModule, Routes } from '@angular/router';
-import { TabComponent } from './tab/tab.component';
+import { TabComponent } from './tab/tab/tab.component';
+import { LoginComponent } from './user/login/login.component';
+import { RegisterComponent } from './user/register/register.component';
+import { UserModule } from './user/user.module';
 
 const appRoutes: Routes = [
   { path: 'tab/:id', component: TabComponent },
+  { path: 'tabs', component: TabListComponent },
+  { path: 'login', component: LoginComponent },
+  { path: 'register', component: RegisterComponent },
   { path: 'tabs', component: TabListComponent },
   { path: '', redirectTo: 'tabs', pathMatch: 'full'}
 ];
@@ -23,7 +29,7 @@ const appRoutes: Routes = [
     TabListComponent,
     NavbarComponent,
     TabDetailsComponent,
-    TabComponent
+    TabComponent,
   ],
   imports: [
     RouterModule.forRoot(
@@ -32,6 +38,7 @@ const appRoutes: Routes = [
     ),
     NgbModule,
     BrowserModule,
+    UserModule,
     AppRoutingModule,
     HttpClientModule
   ],

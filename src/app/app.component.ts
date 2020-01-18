@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AuthenticationService } from './user/authentication.service';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,19 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'Stahb-frontend';
+
+  loggedIn : boolean = false;
+  userName : string;
+
+  constructor(private authService : AuthenticationService) {
+  }
+
+  ngOnInit() {
+    this.authService.user$.subscribe(item => {
+      this.loggedIn = item != null;
+      this.userName = item;
+    })
+  }
+
+  title = 'Stahb';
 }
