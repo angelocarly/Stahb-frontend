@@ -13,6 +13,8 @@ import { TabComponent } from './tab/tab/tab.component';
 import { LoginComponent } from './user/login/login.component';
 import { RegisterComponent } from './user/register/register.component';
 import { UserModule } from './user/user.module';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { UserComponent } from './user/user/user.component';
 
 const appRoutes: Routes = [
   { path: 'tab/:id', component: TabComponent },
@@ -30,6 +32,8 @@ const appRoutes: Routes = [
     NavbarComponent,
     TabDetailsComponent,
     TabComponent,
+    PageNotFoundComponent,
+    UserComponent
   ],
   imports: [
     RouterModule.forRoot(
