@@ -1,0 +1,35 @@
+<!-- <p class="text-monospace mx-auto" style="white-space: pre-wrap;">{{tab.tab}}</p> -->
+<form [formGroup]="tabForm" (ngSubmit)="onSubmit(tabForm.value)" class="container">
+    <div class="card">
+
+        <div class="form-group">
+            <label for="song">
+                Song
+            </label>
+            <input id="song" class="form-control" type="text" formControlName="song">
+        </div>
+
+        <div class="form-group">
+            <label for="artist">
+                Artist
+            </label>
+            <input id="artist" class="form-control" type="text" formControlName="artist">
+        </div>
+
+        <div class="form-group">
+            <label for="tuning">
+                Tuning
+            </label>
+            <input id="tuning" class="form-control" type="text" formControlName="tuning">
+        </div>
+
+        <div class="form-group">
+            <label for="tab">
+                Tab
+            </label>
+            <input id="tab" class="form-control" type="text" formControlName="tab">
+        </div>
+
+        <button class="btn btn-primary" type="submit">Save</button>
+    </div>
+</form>
