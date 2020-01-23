@@ -12,7 +12,7 @@ const appRoutes: Routes = [
     //data: { preload: true }
   },
   {
-    path: '', redirectTo: '/tabs', pathMatch: 'full'
+    path: '', redirectTo: '/tabs', pathMatch: 'full',
   },
   { path: '**', component: PageNotFoundComponent }
 ];
