@@ -17,9 +17,6 @@ export class TabAddComponent implements OnInit {
   constructor(private route: ActivatedRoute, private router: Router, private tabService: TabService, private formBuilder : FormBuilder) { }
 
   ngOnInit() {
-    const id = this.route.snapshot.paramMap.get('id');
-    this.tabService.getTab(id).subscribe((tab: Tab) => this.tab = tab)
-
     this.tabForm = this.formBuilder.group({
       artist: '',
       song: '',
@@ -34,8 +31,9 @@ export class TabAddComponent implements OnInit {
 
     //this.items = this.cartService.clearCart();
     this.tabService.addTab(tab).subscribe(res => {
-      this.tabService.fetchTabs()
+      console.log(res.tab._id)
       this.router.navigate([`tab/${res.tab._id}`])
+      this.tabService.fetchTabs()
     });
     this.tabForm.reset();
   }
